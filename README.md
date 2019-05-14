@@ -1,6 +1,7 @@
 # Spider Monkey Optimization Algorithm (SMO) 
 
 SpiderMonkey is a repository conataining the code for Spider Monkey Optimization Algorithm.
+Student Chapter link/document will be made available soon.
 
 ## Installation
 
