@@ -3,6 +3,11 @@
 SpiderMonkey is a repository conataining the code for Spider Monkey Optimization Algorithm.
 Student Chapter link/document will be made available soon.
 
+## Documentation
+# Plagiarism Report
+
+![Not displaying](https://github.com/nimishbongale/SpiderMonkey/blob/master/misc/Turnitin%20Report%20of%20Spider%20Monkey%20Optimization%20Chapter.png)
+
 ## Installation
 
 Use the [git](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf) to install AutomazionePython.
