@@ -4,7 +4,7 @@ SpiderMonkey is a repository conataining the code for Spider Monkey Optimization
 Student Chapter link/document will be made available soon.
 
 ## Documentation
-# Plagiarism Report
+### Plagiarism Report
 
 ![Not displaying](https://github.com/nimishbongale/SpiderMonkey/blob/master/misc/Turnitin%20Report%20of%20Spider%20Monkey%20Optimization%20Chapter.png)
 
