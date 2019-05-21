@@ -1,7 +1,7 @@
 # Spider Monkey Optimization Algorithm (SMO) 
 
 SpiderMonkey is a repository conataining the code for Spider Monkey Optimization Algorithm.
-The student chapter link can be found [here](https://github.com/nimishbongale/SpiderMonkey/blob/master/chapter/Spider%20Monkey%20Optimization%20and%20Nature%20Inspired%20Computing.pdf)
+The student chapter link can be found [here](https://github.com/nimishbongale/SpiderMonkey/blob/master/chapter/Spider%20Monkey%20Optimization%20and%20Nature%20Inspired%20Computing.pdf).
 
 ## Documentation
 ### Plagiarism Report
@@ -20,7 +20,10 @@ git clone https://github.com/nimishbongale/SpiderMonkey.git
 
 ```cd``` into the required directory, and compile and run the python code. 
 ```python
-python filename.py
+python benchmarks.py
+python solution.py
+python SMO.py
+python Main.py
 ```
 
 ## Contributing
