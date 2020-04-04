@@ -1,7 +1,7 @@
 # Spider Monkey Optimization Algorithm (SMO) 
 
 SpiderMonkey is a repository containing the code for Spider Monkey Optimization Algorithm in Python.
-The student chapter link can be found [here]().
+The student chapter link can be found in the repo description.
 
 ## Documentation
 ### Plagiarism Report
