@@ -12,6 +12,12 @@ Reference: Jagdish Chand Bansal, Harish Sharma, Shimpi Singh Jadon, and Maurice 
 
 Code compatible:
  -- Python: 2.* or 3.*
+
+ 
+Code further documented and explained by Repo maintainers 
+
+@nimishbongale
+@tanisha0311
 """
 
 import numpy
@@ -19,8 +25,13 @@ import math
 
 # define the function blocks 
 def F1(x):
-    s=numpy.sum(x**2);
+    s=numpy.sum(x**2)
     return s
+#More objective functions can be inserted here 
+
+#Ex: def F1(x):
+#       s=numpy.sum(sin(x))
+#       return s
 
 # define the function parameters 
 def getFunctionDetails(a):
@@ -28,6 +39,7 @@ def getFunctionDetails(a):
     # [name, lb, ub, dim, acc_err, obj_val]
     param = {	0: ["F1",-100,100,30,1.0e-5,0],
             }
+            # add values into param dict depending on which objective function to use and what are the parameters associated with it 
     return param.get(a, "nothing")
 
 

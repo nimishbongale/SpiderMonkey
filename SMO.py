@@ -25,20 +25,20 @@ from solution import solution
 
 class SMO():
     def __init__(self,objf1,lb1,ub1,dim1,PopSize1,acc_err1,iters1):
-        self.PopSize=PopSize1
-        self.dim=dim1
-        self.acc_err=acc_err1
-        self.lb=lb1
-        self.ub=ub1
-        self.objf=objf1
-        self.pos=numpy.zeros((PopSize1,dim1))
-        self.fun_val = numpy.zeros(PopSize1)
-        self.fitness = numpy.zeros(PopSize1)
+        self.PopSize=PopSize1 #population size 
+        self.dim=dim1 #dimensions
+        self.acc_err=acc_err1 #accuracy error
+        self.lb=lb1 #lower bound
+        self.ub=ub1 #ubber bound
+        self.objf=objf1 #objective function
+        self.pos=numpy.zeros((PopSize1,dim1)) #position array 
+        self.fun_val = numpy.zeros(PopSize1) #function evaluation for every monkey pos
+        self.fitness = numpy.zeros(PopSize1) #fitness array of every monkey
         self.gpoint = numpy.zeros((PopSize1,2))
-        self.prob=numpy.zeros(PopSize1)
-        self.LocalLimit=dim1*PopSize1;
-        self.GlobalLimit=PopSize1;
-        self.fit = numpy.zeros(PopSize1)
+        self.prob=numpy.zeros(PopSize1) #probabibiility values
+        self.LocalLimit=dim1*PopSize1; #LocalLeaderLimit
+        self.GlobalLimit=PopSize1; #GlobalLeaderLimit
+        self.fit = numpy.zeros(PopSize1) 
         self.MinCost=numpy.zeros(iters1)
         self.Bestpos=numpy.zeros(dim1)
         self.group = 0
@@ -70,6 +70,7 @@ class SMO():
                     self.pos[i,j]=random.random()*(self.ub-self.lb)+self.lb
                 else:
                     self.pos[i,j]=random.random()*(self.ub[j]-self.lb[j])+self.lb[j]
+        #Randomly initialize Spider Monkey positions
         #Calculate objective function for each particle
         for i in range(self.PopSize):
             # Performing the bound checking
@@ -81,26 +82,26 @@ class SMO():
         # Initialize Global Leader Learning
         GlobalMin=self.fun_val[0]
         GlobalLeaderPosition=self.pos[0,:]
-        GlobalLimitCount=0
+        GlobalLimitCount=0 #initially
 
         # Initialize Local Leader Learning
         for k in range(self.group):
             LocalMin[k]=self.fun_val[int(self.gpoint[k,0])]
-            LocalLimitCount[k]=0
+            LocalLimitCount[k]=0 #initially
             LocalLeaderPosition[k,:]=self.pos[int(self.gpoint[k,0]),:]
     # ============================================ X X X ======================================================= #
 
 
     # =========== Function: CalculateProbabilities() ============ #
     def CalculateProbabilities(self):
-        maxfit=self.fitness[0];
+        maxfit=self.fitness[0]
         i=1
         while(i<self.PopSize):
             if (self.fitness[i]>maxfit):
-                maxfit=self.fitness[i];
+                maxfit=self.fitness[i]
             i+=1
         for i in range(self.PopSize):
-            self.prob[i]=(0.9*(self.fitness[i]/maxfit))+0.1;
+            self.prob[i]=(0.9*(self.fitness[i]/maxfit))+0.1
     # ========================== X X X ======================== #
 
     # ================= Function: create_group() ================ #
@@ -191,8 +192,8 @@ class SMO():
         new_position=numpy.zeros((1,self.dim))
         lo=int(self.gpoint[k,0])
         hi=int(self.gpoint[k,1])
-        i=lo;
-        l=lo;
+        i=lo
+        l=lo
         while(l<hi):
             if (random.random() < self.prob[i]):
                 l+=1
@@ -211,9 +212,9 @@ class SMO():
                     self.pos[i,:]=new_position
                     self.fun_val[i]=ObjValSol
                     self.fitness[i]=FitnessSol
-            i+=1;
+            i+=1
             if (i==(hi)):
-                i=lo;
+                i=lo
     # ========================== X X X ======================== #
 
     # ================= Function: GlobalLeaderDecision() ================ #
