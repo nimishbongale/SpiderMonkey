@@ -12,6 +12,11 @@ Reference: Jagdish Chand Bansal, Harish Sharma, Shimpi Singh Jadon, and Maurice 
 
 Code compatible:
  -- Python: 2.* or 3.*
+
+ Code further documented and explained by Repo maintainers 
+
+@nimishbongale
+@tanisha0311
 """
 
 class solution:
