@@ -20,9 +20,6 @@ git clone https://github.com/nimishbongale/SpiderMonkey.git
 
 ```cd``` into the required directory, and compile and run the python code. 
 ```python
-python benchmarks.py
-python solution.py
-python SMO.py
 python Main.py
 ```
 
